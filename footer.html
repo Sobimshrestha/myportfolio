@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+    *{
+    background-color: black;
+    color: white;
+}
+.Footer_Container{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: 20px;
+}
+.footer_Paragraph{
+    width: 50%;
+}
+
+.right_part{
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    width: 30%;
+}
+.right_part a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    position: relative;
+    border-bottom: 2px solid transparent; /* start hidden */
+    transition: border-bottom 0.3s;      /* smooth animation */
+}
+.right_part a:after{
+    content: "";
+    position: absolute;
+    width: 0;
+    left: 0;
+    bottom: 0;
+    height: 2px;
+    background-color: #f0a500;
+    transition: width 0.3s ease;
+}
+
+.right_part a:hover::after{
+    width: 50%;
+}
+
+</style>
+</head>
+<body>
+<div class="Footer_Container">
+<div class = 'footer_Paragraph'>
+    <p>
+        <img src="logo.png" alt="logo" style="height: 70px; width: 80px;">
+        <h1>Mistri</h1>
+        Mistri is a simple web app we’re building in Nepal to make finding labor easier and less stressful. Right now, most people rely on random contacts or word of mouth to hire workers like masons, electricians, or plumbers—and that often wastes time and creates uncertainty. With Mistri, you can quickly find the right person for the job in one place.
+
+The idea is to connect workers directly with customers without the usual hassle. Workers get more chances to find jobs, and people hiring can see who they’re choosing, compare options, and feel more confident. In a place where the labor system is still mostly informal, Mistri is trying to bring a bit more trust, speed, and convenience into the process.
+    </p>
+    <p class="Other details">
+        ADDRESS: Pokhara <br>
+        CONTACT: 9812345678<br>
+        EMAIL: contactus@gmail.com
+    </p>
+</div>
+
+<div class="right_part">
+    <a href="#" style="text-decoration: none;">About Us</a>
+    <a href="#" style="text-decoration: none;">Privacy Policy</a>
+    <a href="#" style="text-decoration: none;">Contact Us</a>
+    <a href="#" style="text-decoration: none;">Terms and Conditions</a>
+</div>
+</div>
+</body>
+</html>

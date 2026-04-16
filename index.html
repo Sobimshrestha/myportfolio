@@ -1,0 +1,502 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Sobim Shrestha — Multimodal AI Engineer in Progress. BIT 2nd Year student at Informatics College, Pokhara, Nepal. Building AI systems that see, hear, and understand." />
+  <title>Sobim Shrestha — Multimodal AI Engineer</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- Custom Cursor -->
+  <div class="cursor" id="cursor"></div>
+  <div class="cursor-trail" id="cursor-trail"></div>
+
+  <!-- Particle Canvas -->
+  <canvas id="particle-canvas"></canvas>
+
+  <!-- Matrix Rain Canvas -->
+  <canvas id="matrix-canvas"></canvas>
+
+  <!-- ── Navigation ──────────────────────────── -->
+  <header class="nav" id="nav">
+    <div class="nav__inner container">
+      <a href="#hero" class="nav__logo" aria-label="Home">
+        <span class="logo-bracket">&lt;</span>S·S<span class="logo-bracket"> /&gt;</span>
+      </a>
+      <nav class="nav__links" aria-label="Primary navigation">
+        <a href="#about" class="nav__link">About</a>
+        <a href="#skills" class="nav__link">Skills</a>
+        <a href="#projects" class="nav__link">Projects</a>
+
+        <a href="#contact" class="nav__link nav__link--cta" id="nav-contact">Contact</a>
+      </nav>
+      <button class="nav__hamburger" id="hamburger" aria-label="Toggle menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+    <!-- Mobile drawer -->
+    <div class="nav__drawer" id="nav-drawer" aria-hidden="true">
+      <a href="#about" class="nav__drawer-link">About</a>
+      <a href="#skills" class="nav__drawer-link">Skills</a>
+      <a href="#projects" class="nav__drawer-link">Projects</a>
+
+      <a href="#contact" class="nav__drawer-link">Contact</a>
+    </div>
+  </header>
+
+  <!-- ── Hero ──────────────────────────────────── -->
+  <section class="hero" id="hero">
+    <div class="hero__inner container">
+      <div class="hero__badge fade-in">
+        <span class="badge-dot"></span>
+        Open to Opportunities · 2026
+      </div>
+      <h1 class="hero__name fade-in delay-1">Sobim Shrestha</h1>
+      <p class="hero__title fade-in delay-2">
+         <span class="hero__separator">|</span> BIT 2nd Year
+      </p>
+      <p class="hero__subtitle fade-in delay-3">
+        Building  systems that <em>see</em>, <em>hear</em>, and <em>understand</em>.
+      </p>
+      <div class="hero__typewriter fade-in delay-3">
+        <span class="typewriter-prefix">I am a </span>
+        <span class="typewriter-text" id="typewriter"></span>
+        <span class="typewriter-cursor">|</span>
+      </div>
+      <div class="hero__actions fade-in delay-4">
+        <a href="#projects" class="btn btn--primary" id="hero-cta">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"/><line x1="3" y1="9" x2="21" y2="9"/><line x1="9" y1="21" x2="9" y2="9"/></svg>
+          View Projects
+        </a>
+        <a href="#contact" class="btn btn--ghost">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+          Contact Me
+        </a>
+      </div>
+    </div>
+    <div class="hero__scroll-hint fade-in delay-5" aria-hidden="true">
+      <span class="scroll-text">Scroll</span>
+      <span class="scroll-line"></span>
+    </div>
+  </section>
+
+  <!-- ── About ─────────────────────────────────── -->
+  <section class="about section" id="about">
+    <div class="container">
+      <div class="section__header reveal">
+        <span class="section__label">Who I Am</span>
+        <h2 class="section__title">About Me</h2>
+      </div>
+      <div class="about__grid">
+        <div class="about__text reveal">
+          <p>
+            I'm a <strong>19-year-old BIT student</strong> at <strong>Informatics College, Pokhara, Nepal</strong>.
+            <!-- I'm passionate about building AI from <em>mathematical foundations</em> — not just calling APIs. -->
+          </p>
+          <p>
+            <!-- Currently deep-diving into <strong>Linear Algebra</strong> and <strong>Calculus</strong> as my foundation -->
+            <!-- for Generative AI. I believe in truly understanding the math behind the models, not just using pre-built tools. -->
+          </p>
+          <blockquote class="about__philosophy">
+            <!-- <span class="philosophy-icon"></span> -->
+            <span>My Study Philosophy: <strong>Watch → Take Notes → Code Yourself → Build Projects</strong></span>
+          </blockquote>
+        </div>
+        <div class="about__hardware reveal">
+          <h3 class="hardware__title">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
+            My Setup
+          </h3>
+          <ul class="hardware__list">
+            <li><span class="hw-label">Machine</span><span class="hw-value">Acer Nitro V 15</span></li>
+            <li><span class="hw-label">GPU</span><span class="hw-value">RTX 4050 6GB</span></li>
+            <li><span class="hw-label">CPU</span><span class="hw-value">i5-13420H</span></li>
+            <li><span class="hw-label">RAM</span><span class="hw-value">16GB DDR5</span></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── Skills ────────────────────────────────── -->
+  <section class="skills section" id="skills">
+    <div class="container">
+      <div class="section__header reveal">
+        <span class="section__label">Tech Stack</span>
+        <h2 class="section__title">Skills & Tools</h2>
+      </div>
+      <div class="skills__grid">
+
+        <div class="skill-card reveal" id="skill-languages">
+          <div class="skill-card__icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
+          </div>
+          <h3 class="skill-card__title">Languages</h3>
+          <div class="skill-card__tags">
+            <span class="tag tag--strong">Python</span>
+            <span class="tag tag--mid">Java</span>
+            <span class="tag">HTML</span>
+            <span class="tag">CSS</span>
+            <span class="tag">JavaScript</span>
+          </div>
+        </div>
+
+        <div class="skill-card reveal" id="skill-libs">
+          <div class="skill-card__icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg>
+          </div>
+          <h3 class="skill-card__title">Libraries & Tools</h3>
+          <div class="skill-card__tags">
+            <span class="tag tag--strong">OpenCV</span>
+            <span class="tag tag--strong">MediaPipe</span>
+            <span class="tag tag--learning">LangChain</span>
+            <span class="tag tag--learning">PyTorch</span>
+          </div>
+        </div>
+
+        <div class="skill-card reveal" id="skill-db">
+          <div class="skill-card__icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><ellipse cx="12" cy="5" rx="9" ry="3"/><path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"/><path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"/></svg>
+          </div>
+          <h3 class="skill-card__title">Database</h3>
+          <div class="skill-card__tags">
+            <span class="tag tag--strong">MySQL</span>
+          </div>
+        </div>
+
+        <div class="skill-card reveal" id="skill-learning">
+          <div class="skill-card__icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 16v-4"/><path d="M12 8h.01"/></svg>
+          </div>
+          <h3 class="skill-card__title">Currently Learning</h3>
+          <div class="skill-card__tags">
+            <span class="tag tag--learning">Linear Algebra</span>
+            <span class="tag tag--learning">Calculus</span>
+            <span class="tag tag--learning">Deep Learning</span>
+            <span class="tag tag--learning">Generative AI</span>
+          </div>
+        </div>
+
+        <div class="skill-card reveal" id="skill-cloud">
+          <div class="skill-card__icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 10h-1.26A8 8 0 1 0 9 20h9a5 5 0 0 0 0-10z"/></svg>
+          </div>
+          <h3 class="skill-card__title">Cloud</h3>
+          <div class="skill-card__tags">
+            <span class="tag">AWS Educate</span>
+          </div>
+        </div>
+
+        <div class="skill-card reveal" id="skill-vc">
+          <div class="skill-card__icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="18" cy="18" r="3"/><circle cx="6" cy="6" r="3"/><path d="M13 6h3a2 2 0 0 1 2 2v7"/><path d="M6 9v12"/></svg>
+          </div>
+          <h3 class="skill-card__title">Version Control</h3>
+          <div class="skill-card__tags">
+            <span class="tag tag--strong">GitHub</span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ── Projects ──────────────────────────────── -->
+  <section class="projects section" id="projects">
+    <div class="container">
+      <div class="section__header reveal">
+        <span class="section__label">What I've Built</span>
+        <h2 class="section__title">Projects</h2>
+      </div>
+      <div class="projects__grid">
+
+        <article class="project-card reveal" id="project-1">
+          <div class="project-card__header">
+            <span class="project-card__number">01</span>
+            <div class="project-card__icon">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg>
+            </div>
+          </div>
+          <h3 class="project-card__title">Screen Attention Monitor</h3>
+          <p class="project-card__desc">
+            Detects if the user is watching the screen using computer vision. The video automatically pauses when the user looks away and resumes when they return.
+          </p>
+          <div class="project-card__tech">
+            <span>Python</span>
+            <span>OpenCV</span>
+          </div>
+          <a href="https://github.com/Sobimshrestha/Screen-Attention-Monitor" target="_blank" rel="noopener" class="project-card__github">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
+            View on GitHub
+          </a>
+        </article>
+
+        <article class="project-card reveal" id="project-2">
+          <div class="project-card__header">
+            <span class="project-card__number">02</span>
+            <div class="project-card__icon">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"/><path d="M19.07 4.93a10 10 0 0 1 0 14.14"/><path d="M15.54 8.46a5 5 0 0 1 0 7.07"/></svg>
+            </div>
+          </div>
+          <h3 class="project-card__title">Volume Control via Finger Pinch</h3>
+          <p class="project-card__desc">
+            Controls system volume using hand gesture recognition. Pinch your fingers together to adjust volume levels in real-time through your webcam.
+          </p>
+          <div class="project-card__tech">
+            <span>Python</span>
+            <span>OpenCV</span>
+            <span>MediaPipe</span>
+          </div>
+          <a href="https://github.com/" target="_blank" rel="noopener" class="project-card__github">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
+            Not uploaded for now
+          </a>
+        </article>
+
+        <article class="project-card reveal" id="project-3">
+          <div class="project-card__header">
+            <span class="project-card__number">03</span>
+            <div class="project-card__icon">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M4 15s1-1 4-1 5 2 8 2 4-1 4-1V3s-1 1-4 1-5-2-8-2-4 1-4 1z"/><line x1="4" y1="22" x2="4" y2="15"/></svg>
+            </div>
+          </div>
+          <h3 class="project-card__title">Mouse Control via Index Finger</h3>
+          <p class="project-card__desc">
+            Controls mouse movement and clicking using finger tracking. Navigate your computer hands-free with precise index finger gesture recognition.
+          </p>
+          <div class="project-card__tech">
+            <span>Python</span>
+            <span>OpenCV</span>
+            <span>MediaPipe</span>
+          </div>
+          <a href="https://github.com/" target="_blank" rel="noopener" class="project-card__github">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
+            Not uploaded for now
+          </a>
+        </article>
+
+        <article class="project-card reveal" id="project-4">
+          <div class="project-card__header">
+            <span class="project-card__number">04</span>
+            <div class="project-card__icon">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 1a3 3 0 0 0-3 3v8a3 3 0 0 0 6 0V4a3 3 0 0 0-3-3z"/><path d="M19 10v2a7 7 0 0 1-14 0v-2"/><line x1="12" y1="19" x2="12" y2="23"/><line x1="8" y1="23" x2="16" y2="23"/></svg>
+            </div>
+          </div>
+          <h3 class="project-card__title">Voice Assistant</h3>
+          <p class="project-card__desc">
+            Executes system commands via voice input. Speak naturally to control your computer — open apps, search the web, and perform system tasks.
+          </p>
+          <div class="project-card__tech">
+            <span>Python</span>
+            <span>Speech Recognition</span>
+          </div>
+          <a href="https://github.com/Sobimshrestha/AI-intergated-assistant" target="_blank" rel="noopener" class="project-card__github">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
+            View on GitHub
+          </a>
+        </article>
+
+        <article class="project-card reveal" id="project-5">
+          <div class="project-card__header">
+            <span class="project-card__number">05</span>
+            <div class="project-card__icon">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/><polyline points="3.27 6.96 12 12.01 20.73 6.96"/><line x1="12" y1="22.08" x2="12" y2="12"/></svg>
+            </div>
+          </div>
+          <h3 class="project-card__title">Inventory Management System</h3>
+          <p class="project-card__desc">
+            Full inventory management system built as college coursework. Track stock, manage orders, and generate reports with a complete CRUD interface.
+          </p>
+          <div class="project-card__tech">
+            <span>Python</span>
+            <span>MySQL</span>
+          </div>
+          <a href="https://github.com/" target="_blank" rel="noopener" class="project-card__github">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
+            View on GitHub
+          </a>
+        </article>
+
+        <article class="project-card reveal" id="project-6">
+          <div class="project-card__header">
+            <span class="project-card__number">06</span>
+            <div class="project-card__icon">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M18 8h1a4 4 0 0 1 0 8h-1"/><path d="M2 8h16v9a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V8z"/><line x1="6" y1="1" x2="6" y2="4"/><line x1="10" y1="1" x2="10" y2="4"/><line x1="14" y1="1" x2="14" y2="4"/></svg>
+            </div>
+          </div>
+          <h3 class="project-card__title">Gym Management System</h3>
+          <p class="project-card__desc">
+            Complete gym management application with member registration, membership tracking, payment processing, and attendance management.
+          </p>
+          <div class="project-card__tech">
+            <span>Java</span>
+            <span>MySQL</span>
+          </div>
+          <a href="https://github.com/" target="_blank" rel="noopener" class="project-card__github">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
+            View on GitHub
+          </a>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ── Roadmap / Journey (commented out for now) ──
+  <section class="roadmap section" id="roadmap">
+    <div class="container">
+      <div class="section__header reveal">
+        <span class="section__label">My Journey</span>
+        <h2 class="section__title">Learning Roadmap</h2>
+      </div>
+      <div class="timeline">
+
+        <div class="timeline__item timeline__item--active reveal">
+          <div class="timeline__marker">
+            <span class="timeline__dot timeline__dot--active"></span>
+          </div>
+          <div class="timeline__content">
+            <span class="timeline__phase">Phase 1</span>
+            <h3 class="timeline__title">Math Foundations</h3>
+            <p class="timeline__desc">Linear Algebra & Calculus — building the mathematical intuition needed for deep learning from first principles.</p>
+            <span class="timeline__status timeline__status--active">● In Progress</span>
+          </div>
+        </div>
+
+        <div class="timeline__item reveal">
+          <div class="timeline__marker">
+            <span class="timeline__dot"></span>
+          </div>
+          <div class="timeline__content">
+            <span class="timeline__phase">Phase 2</span>
+            <h3 class="timeline__title">Deep Learning Core</h3>
+            <p class="timeline__desc">Neural networks, backpropagation, CNNs, RNNs, transformers — understanding architectures that power modern AI.</p>
+            <span class="timeline__status">○ Upcoming</span>
+          </div>
+        </div>
+
+        <div class="timeline__item reveal">
+          <div class="timeline__marker">
+            <span class="timeline__dot"></span>
+          </div>
+          <div class="timeline__content">
+            <span class="timeline__phase">Phase 3</span>
+            <h3 class="timeline__title">LLMs & GenAI Tools</h3>
+            <p class="timeline__desc">Large Language Models, prompt engineering, fine-tuning, LangChain, RAG systems — applying generative AI in practice.</p>
+            <span class="timeline__status">○ Upcoming</span>
+          </div>
+        </div>
+
+        <div class="timeline__item reveal">
+          <div class="timeline__marker">
+            <span class="timeline__dot"></span>
+          </div>
+          <div class="timeline__content">
+            <span class="timeline__phase">Phase 4</span>
+            <h3 class="timeline__title">Multimodal AI Specialization</h3>
+            <p class="timeline__desc">Combining vision, audio, and language models — building systems that process multiple input modalities simultaneously.</p>
+            <span class="timeline__status">○ Upcoming</span>
+          </div>
+        </div>
+
+        <div class="timeline__item reveal">
+          <div class="timeline__marker">
+            <span class="timeline__dot timeline__dot--final"></span>
+          </div>
+          <div class="timeline__content">
+            <span class="timeline__phase">Phase 5</span>
+            <h3 class="timeline__title">Final Year Project</h3>
+            <p class="timeline__desc">Multimodal AI Assistant — combining OpenCV + MediaPipe + Whisper + LLM into a single intelligent system.</p>
+            <span class="timeline__status">○ Upcoming</span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+  -->
+
+  <!-- ── FYP Highlight ─────────────────────────── -->
+  <section class="fyp section" id="fyp">
+    <div class="container">
+      <div class="fyp__card reveal">
+        <div class="fyp__badge">🚀 Signature FYP Project</div>
+        <h2 class="fyp__title">Multimodal AI Assistant</h2>
+        <p class="fyp__desc">
+          A system that <strong>sees</strong> through webcam, <strong>detects gestures</strong>, <strong>listens</strong> to voice,
+          and <strong>responds intelligently</strong> using LLM. The ultimate convergence of everything I'm learning.
+        </p>
+        <div class="fyp__features">
+          <div class="fyp__feature">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg>
+            <span>Computer Vision (OpenCV)</span>
+          </div>
+          <div class="fyp__feature">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 8h1a4 4 0 0 1 0 8h-1"/><path d="M2 8h16v9a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V8z"/><line x1="6" y1="1" x2="6" y2="4"/><line x1="10" y1="1" x2="10" y2="4"/><line x1="14" y1="1" x2="14" y2="4"/></svg>
+            <span>Gesture Detection (MediaPipe)</span>
+          </div>
+          <div class="fyp__feature">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 1a3 3 0 0 0-3 3v8a3 3 0 0 0 6 0V4a3 3 0 0 0-3-3z"/><path d="M19 10v2a7 7 0 0 1-14 0v-2"/><line x1="12" y1="19" x2="12" y2="23"/><line x1="8" y1="23" x2="16" y2="23"/></svg>
+            <span>Voice Recognition (Whisper)</span>
+          </div>
+          <div class="fyp__feature">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+            <span>LLM Intelligence</span>
+          </div>
+          <div class="fyp__feature">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 10h-1.26A8 8 0 1 0 9 20h9a5 5 0 0 0 0-10z"/></svg>
+            <span>AWS Deployment</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── Contact ───────────────────────────────── -->
+  <section class="contact section" id="contact">
+    <div class="container">
+      <div class="section__header reveal">
+        <span class="section__label">Get in Touch</span>
+        <h2 class="section__title">Let's Connect</h2>
+      </div>
+      <div class="contact__content reveal">
+        <p class="contact__text">
+          Based in <strong>Pokhara, Nepal</strong> 🇳🇵 — I'm always open to collaborations,
+          learning opportunities, and conversations about AI and technology.
+        </p>
+        <div class="contact__links">
+          <a href="https://github.com/Sobimshrestha" target="_blank" rel="noopener" class="contact__link" id="contact-github">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
+            <span>GitHub</span>
+          </a>
+          <a href="https://linkedin.com/" target="_blank" rel="noopener" class="contact__link" id="contact-linkedin">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+            <span>LinkedIn</span>
+          </a>
+          <a href="shresthasobim@gmail.com" class="contact__link" id="contact-email">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+            <span>Email</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── Footer ────────────────────────────────── -->
+  <footer class="footer">
+    <div class="container footer__inner">
+      <p class="footer__copy">
+        © 2026 Sobim Shrestha &mdash; 🇳🇵
+      </p>
+      <p class="footer__tagline">Multimodal AI Engineer in Progress</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

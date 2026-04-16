@@ -1,0 +1,20 @@
+*{
+    background-color: black;
+    color: white;
+}
+.Footer_Container{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: 20px;
+}
+.footer_Paragraph{
+    width: 50%;
+}
+
+.right_part{
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    width: 30%;
+}
